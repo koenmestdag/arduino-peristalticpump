@@ -1,0 +1,24 @@
+/*
+ * Drive a peristaltic pump with Arduino
+ */
+
+int pinMe = 2; // the pin we will use as output
+
+void setup() {
+  Serial.begin(9600);
+  // put your setup code here, to run once:
+  pinMode(pinMe,OUTPUT);
+  digitalWrite(pinMe,HIGH);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  digitalWrite(pinMe,HIGH);
+  Serial.println(String(pinMe) + "HIGH");
+  delay(2000);
+
+  digitalWrite(pinMe,LOW);
+  Serial.println(String(pinMe) + "LOW");
+  delay(2000);
+    
+}
